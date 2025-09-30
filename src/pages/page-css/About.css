@@ -1,0 +1,91 @@
+/*About.css*/
+
+.about-container {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+.about-header {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+.highlight{ 
+    color: #2563eb;
+}
+
+.about-subtitle {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: #4b5563;
+}
+
+.skills-section {
+    margin-top: 3rem;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+}
+
+/*Icon colors */
+.skill-icon.html {color:#e34f26;}
+.skill-icon.css {color:#1572b6;}
+.skill-icon.js {color:#f7df1e;}
+.skill-icon.react {color:#61dafb;}
+.skill-icon.github {color:#333;}
+.skill-icon.sql {color:#4f46e5;}
+.skill-icon.python {color:#3776ab;}
+.skill-icon.tableau {color:#e97627;}
+
+.contact-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out;
+}
+.contact-button:hover {
+    background: #1e40af;
+}
