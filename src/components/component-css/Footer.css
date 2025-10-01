@@ -1,8 +1,17 @@
 /* Footer.css */
 .footer {
-    background-color: #1f2937;
-    color: white;
+    background-color: #4A3D48;
+    color: #f9f9fb;
     text-align: center;
     padding: 1rem;
+    font-size: 0.9rem;
     margin-top: auto;
+}
+
+.footer a {
+    color: #4A3D48;
+}
+
+.footer a:hover {
+    color: #f9f9fb;
 }

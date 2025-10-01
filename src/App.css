@@ -7,5 +7,20 @@
   flex-grow: 1;
   padding: 2rem;
 }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F9FAFD;
+  color: #1f1f1f;
+}
 
+a {
+  text-decoration: none;
+  color: #4A3D48;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4A3D48;
+}
 

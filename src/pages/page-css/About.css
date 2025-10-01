@@ -2,12 +2,12 @@
 
 .about-container {
     min-height: 100vh;
-    background-color: #f9fafb;
+    background-color: #f9f9fb;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3rem 1.5rem;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about-header {
@@ -18,10 +18,10 @@
 .about-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #8C6A5D;
 }
 .highlight{ 
-    color: #2563eb;
+    color: #8C6A5D;
 }
 
 .about-subtitle {
@@ -41,7 +41,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #1f2937;
+    color: #6d28d9;
 }
 
 .skills-grid {
@@ -77,9 +77,10 @@
 }
 
 .contact-button {
+    align-items: center;
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #2563eb;
+    background: #8C6A5D;
     color: white;
     border-radius: 12px;
     text-decoration: none;
@@ -87,5 +88,5 @@
     transition: background 0.2s ease-in-out;
 }
 .contact-button:hover {
-    background: #1e40af;
+    background: #F9FAFD;
 }
