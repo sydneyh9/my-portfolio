@@ -1,1 +1,108 @@
 /*Projects.css*/
+
+.projects-container {
+    min-height: 80vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8C6A5D;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.projects-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab {
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #8C6A5D;
+    background-color: white;
+    color: #8C6A5D;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.tab:hover {
+    background-color: #f3e8ff;
+}
+
+.tab.active {
+    background-color: #8C6A5D;
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-title{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #8C6A5D;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.skill-icon.html {color:#e34f26;}
+.skill-icon.css {color:#1572b6;}
+.skill-icon.js {color:#f7df1e;}
+.skill-icon.react {color:#61dafb;}
+.skill-icon.github {color:#333;}
+.skill-icon.sql {color:#4f46e5;}
+.skill-icon.python {color:#3776ab;}
+.skill-icon.tableau {color:#e97627;}

@@ -1,45 +1,81 @@
 //About.jsx
 import {motion} from "framer-motion";
-import {FaHtml5, FaCss3Alt, FaJs, FaGithub} from "react-icons/fa";
+import {useState} from "react";
+import {FaHtml5, FaCss3Alt, FaJs, FaGithub, FaReact, FaDatabase} from "react-icons/fa";
+import {SiR, SiTableau} from "react-icons/si";
 import "./page-css/Projects.css";
 
 export default function Projects() {
-    return (
-        <div className="projects-container">
+    const [activeTab, setActiveTab] = useState("software");
+    const webProjects = [
+        {
+                    title: "Blackjack",
+                    description: "An interactive, web-based Blackjack game built with a jazzy casino-inspired theme and user inclusivity in mind.",
+                    techStack: ["HTML5", "CSS3", "JavaScript", "GitHub"],
+        },
+    ];
+    const dataProjects = [
+        {
+            title: "Grocery Sales Analysis Case Study",
+            description: "Analyzed grocery sales data to find trends and optimize inventory",
+            techStack: ["SQL", "Excel", "Tableau", "R"]
+        },
+    ];
+
+    const iconMap = {
+        HTML5: <FaHtml5 className="skill-icon html" />,
+        CSS3: <FaCss3Alt className="skill-icon css" />,
+        JavaScript: <FaJs className="skill-icon js" />,
+        GitHub: <FaGithub className="skill-icon github" />,
+        React: <FaReact className="skill-icon react" />,
+        R: <SiR className="skill-icon r" />,
+        Tableau: <SiTableau className="skill-icon tableau" />,
+        SQL: <FaDatabase className="skill-icon sql" />,
+    };
+
+    const renderProjects = (projects) => 
+        projects.map((project, index) => (
             <motion.div
-            initial={{opacity: 0, y: 40}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.6}}
-            className="projects-header"
+            key={index}
+            initial={{ opacity: 0, y: 40}}
+            animate= {{ opacity: 1, y: 0}}
+            transition={{duration: 0.6, delay: index * 0.2}}
+            className="project-card"
             >
-                <h1 className="project-title">
-                    Blackjack
-                </h1>
-                <p className="project-subtitle">
-                An interactive, web-based Blackjack game built with a jazzy casino-inspired theme and user inclusivity in mind.
-                </p>
-                <h2 className="skill-used">
-                    Languages/Technologies Used:
-                </h2>
+                <h2 className="project-title">{project.title}</h2>
+                <p className="project-description">{project.description}</p>
                 <div className="skills-grid">
-                <div className="skill-item">
-                    <FaHtml5 className="skill-icon html"/>
-                    <span>HTML5</span>
-                </div>
-                <div className="skill-item">
-                    <FaCss3Alt className="skill-icon css" />
-                    <span> CSS3</span>
-                </div>
-                <div className="skill-item">
-                    <FaJs className="skill-icon js" />
-                    <span>JavaScript</span>
-                </div>
-                <div className="skill-item">
-                    <FaGithub className="skill-icon github" />
-                    <span>GitHub</span>
-                </div>
+                    {project.techStack.map((tech, i) => (
+                        <div className="skill-item" key={i}>
+                            {iconMap[tech]}
+                            <span> {tech}</span>
+                            </div>
+                    ))}
                 </div>
             </motion.div>
-        </div>
-    );
+        ));
+
+        return (
+            <div className="projects-container">
+                <h1 className="projects-page-title"> Projects</h1>
+
+                <div className="projects-tab">
+                    <button
+                    className={activeTab === "development" ? "tab active" : "tab"}
+                    onClick={() => setActiveTab("development")}
+                    >
+                        Web Development
+                    </button>
+                    <button
+                    className={activeTab === "data" ? "tab active" : "tab"}
+                    onClick={() => setActiveTab("data")}
+                    >
+                        Data Analysis
+                    </button>
+                </div>
+                <div className="projects-grid">
+                    {activeTab === "development" ? renderProjects(webProjects) : renderProjects(dataProjects)}
+                </div>
+            </div>
+        );
 }
