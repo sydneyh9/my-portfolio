@@ -1,3 +1,14 @@
+:root {
+  --latte: #fdfaf6;
+  --mocha: #4b2e2e;
+  --espresso: #2c1a1a;
+  --foam: #fff8f0;
+  --accent: #a78bfa;
+  --steam: #d7ccca;
+
+  --coffee-shadow: 0 4px 12px rgba(75, 46, 43, 0.2);
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -10,17 +21,21 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F9FAFD;
-  color: #1f1f1f;
+  background-color: var(--latte);
+  color: var(--espresso);
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 20 20'%3E%3Cellipse cx='10' cy='10' rx='3' ry='6' fill='%236d4c41' opacity='0.08' /%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  background-attachment: fixed;
 }
 
 a {
   text-decoration: none;
-  color: #4A3D48;
+  color: var(--mocha);
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #4A3D48;
+  color: var(--accent);
 }
 

@@ -1,17 +1,40 @@
 /* Footer.css */
 .footer {
-    background-color: #4A3D48;
-    color: #f9f9fb;
+    background-color: var(--mocha);
+    color: var(--foam);
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     font-size: 0.9rem;
     margin-top: auto;
+    position: relative;
+    overflow: hidden;
 }
 
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 20 20'%3E%3Cellipse cx='10' cy='10' rx='3' ry='6' fill='%236d4c41' opacity='0.08' /%3E%3C/svg%3E");
+    transform: translateX(-50%);
+    animation: steamRise 3s ease-in-out infinite;
+    opacity: 0.3;
+}
 .footer a {
-    color: #4A3D48;
+    color: var(--latte);
+    margin: 0 0.5rem;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .footer a:hover {
-    color: #f9f9fb;
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+@keyframes steamRise {
+    0% { transform: translateX(-50%) translateY(10px); opacity: 0.2;}
+    50% { transform: translateX(-50%) translateY(-10px); opacity: 0.05;}
+    100% { transform: translateX(-50%) translateY(10px); opacity: 0.2;}
 }

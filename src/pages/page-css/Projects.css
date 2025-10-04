@@ -6,12 +6,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: var(--latte-light);
 }
 
 .projects-page-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #8C6A5D;
+    color: var(--espresso);
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -25,21 +26,23 @@
 .tab {
     padding: 0.5rem 1.2rem;
     border-radius: 8px;
-    border: 2px solid #8C6A5D;
-    background-color: white;
-    color: #8C6A5D;
+    border: 2px solid var(--mocha);
+    background-color: var(--foam);
+    color: var(--mocha);
     cursor: pointer;
     font-weight: 600;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .tab:hover {
-    background-color: #f3e8ff;
+    background-color: var(--latte);
+    color: var(--espresso);
 }
 
 .tab.active {
-    background-color: #8C6A5D;
-    color: white;
+    background-color: var(--mocha);
+    color: var(--foam);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .projects-grid {
@@ -53,29 +56,30 @@
 
 
 .project-card {
-    background: #fff;
+    background: var(--foam);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: var(--coffee-shadow);
     padding: 1.5rem;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(75, 46, 43,0.25);
+    background: linear-gradient(135deg, var(--foam), var(--latte));
 }
 
 .project-title{
     font-size: 1.25rem;
     font-weight: 700;
-    color: #8C6A5D;
+    color: var(--espresso);
     margin-bottom: 0.5rem;
 }
 
 .project-description {
     font-size: 0.95rem;
-    color: #4b5563;
+    color: #5a463d;
     margin-bottom: 1rem;
 }
 
@@ -84,6 +88,7 @@
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1rem;
     justify-items: center;
+    margin-bottom: 1rem;
 }
 
 .skill-item {
@@ -91,6 +96,11 @@
     flex-direction: column;
     align-items: center;
     font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
 }
 
 .skill-icon {

@@ -5,14 +5,15 @@
     flex-direction: column;
     padding: 2rem;
     text-align: center;
-    align-items: center;
+    align-items: var(--latte-light);
 }
 
 .skills-title {
     align-items: center;
     font-size: 2rem;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--espresso);
+    margin-bottom: 0.5rem;
 }
 
 .skills-subtitle {
@@ -20,7 +21,7 @@
     margin: 1rem auto 2rem;
     max-width: 600px;
     font-size: 1.125rem;
-    color: #4b5563;
+    color: #5a463d;
 }
 .skills-section {
     align-items: center;
@@ -33,7 +34,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #8C6A5D;
+    color: var(--mocha);
 }
 .skills-category::after {
     content: "";
@@ -41,7 +42,7 @@
     width: 60px;
     height: 3px;
     margin: 0.5rem auto 0;
-    background-color: #8C6A5D;
+    background-color: var(--accent);
     border-radius: 2px;
 }
 
@@ -55,23 +56,54 @@
 }
 
 .skill-item {
-    background: #fff;
+    position: relative;
+    background: var(--foam);
     padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: var(--coffee-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
+.skill-item::before,
+.skill-item::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: rgba(255, 255,255,0.6);
+    border-radius: 2px;
+    transform: translateX(-50%) scaleY(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-item::after {
+    left: 60%;
+}
+
+.skill-item:hover::before,
+.skill-item:hover::after {
+    transform: translateX(-50%) scaleY(1.5) translateY(-20px);
+    opacity: 1;
+    animation: steam-rise 1s infinite;
+}
 .skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(75,46,43, 0.3);
+    background: linear-gradient(135deg, var(--foam), var(--latte));
 }
 .skill-icon {
     font-size: 3rem;
+    transition: transform 0.3s ease, color 0.3s ease;
     margin-bottom: 0.5rem;
+}
+
+.skill-item:hover .skill-icon {
+    transform: translateY(-8px) scale(1.1);
+    color: var(--accent);
 }
 
 .skill-icon.html { color: #e34f26; }
@@ -82,3 +114,9 @@
 .skill-icon.sql {color:#4f46e5;}
 .skill-icon.python {color:#3776ab;}
 .skill-icon.tableau {color:#e97627;}
+
+@keyframes steam-rise {
+    0% { transform: translateX(-50%) scaleY(0.8) translateY(0); opacity: 0.6;}
+    50% {transform: translateX(-50%) scaleY(1.2) translateY(-10px); opacity: 1;}
+    100% {transform: translateX(-50%) scaleY(0.8) translateY(-20x); opacity: 0;}
+}
