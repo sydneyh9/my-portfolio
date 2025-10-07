@@ -1,53 +1,91 @@
 /*Projects.css*/
 
 .projects-container {
-    min-height: 80vh;
-    padding: 2rem;
+    min-height: 90vh;
+    padding: 3rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--latte-light);
+    background: transparent;
 }
 
 .projects-page-title {
-    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--espresso);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
+    letter-spacing: 0.5px;
 }
 
 .projects-tabs {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    background: var(--foam);
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--coffee-shadow);
+}
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-links a {
+    color: var(--espresso);
+    background: var(--latte);
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--coffee-shadow);
+}
+
+.project-links a:hover {
+    background: var(--mocha);
+    color: var(--foam);
 }
 
 .tab {
-    padding: 0.5rem 1.2rem;
-    border-radius: 8px;
-    border: 2px solid var(--mocha);
-    background-color: var(--foam);
+    padding: 0.6rem 1.4rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+    background-color: var(--latte);
     color: var(--mocha);
     cursor: pointer;
     font-weight: 600;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .tab:hover {
-    background-color: var(--latte);
-    color: var(--espresso);
+    background-color: var(--mocha);
+    color: var(--foam);
 }
 
 .tab.active {
-    background-color: var(--mocha);
+    background-color: var(--espresso);
     color: var(--foam);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     width: 100%;
     max-width: 1200px;
@@ -57,55 +95,84 @@
 
 .project-card {
     background: var(--foam);
-    border-radius: 12px;
+    border-radius: 62px;
     box-shadow: var(--coffee-shadow);
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--accent), var(--mocha));
+    border-radius: 16px 16px 0 0;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(75, 46, 43,0.25);
-    background: linear-gradient(135deg, var(--foam), var(--latte));
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(75, 46, 43,0.25);
 }
 
 .project-title{
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     color: var(--espresso);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-description {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #5a463d;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1.25rem;
     justify-items: center;
-    margin-bottom: 1rem;
 }
 
 .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.8rem;
-    transition: transform 0.2s ease;
+    justify-content: center;
+    text-align: center;
+    background: var(--latte);
+    border: 1px solid var(--mocha);
+    border-radius: 0.1rem;
+    padding: 0.75rem 1rem;
+    min-width: 80px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--espresso);
+    transition: all 0.3s ease;
+
 }
 
 .skill-item:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    background: var(--mocha);
+    color: var(--foam);
+    box-shadow: 0 8px 16px rgba(75,46,43,0.25);
 }
 
+
 .skill-icon {
-    font-size: 2rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
 }
 
 .skill-icon.html {color:#e34f26;}

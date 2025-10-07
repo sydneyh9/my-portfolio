@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import {FaReact, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaPython, FaDatabase} from "react-icons/fa";
 import {SiR, SiTableau} from "react-icons/si";
 import "./page-css/About.css";
+import headshot from '../assets/Headshot-Sydney.JPG';
 
 export default function About() {
     return (
@@ -14,12 +15,12 @@ export default function About() {
             className="about-header"
             >
                 <img
-                src="/Headshot-Sydney.jpg"
-                alt="Sydney Holland"
+                src={headshot}
+                alt="Sydney"
                 className="w-32 h-32 rounded-full mx-auto shadow-lg mb-6 object-cover"
                 />
                 <h1 className="about-title">
-                    Welcome, I'm <span className="highlight"> Sydney Holland</span>
+                    Welcome, I'm <span className="highlight"> Sydney</span>
                 </h1>
                 <p className="about-subtitle">
                 A software developer and data analyst with experience in project management and a strong foundation in
