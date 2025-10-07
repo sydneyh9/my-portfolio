@@ -14,7 +14,7 @@ export default function Projects() {
                     description: "An interactive, web-based Blackjack game built with a jazzy casino-inspired theme and user inclusivity in mind.",
                     techStack: ["HTML5", "CSS3", "JavaScript", "GitHub"],
                     source: "https://github.com/sydneyh9/blackjack",
-                    demo: "sydneyh9.github.io/Blackjack/",
+                    demo: "https://sydneyh9.github.io/Blackjack/",
         },
     ];
     const dataProjects = [
@@ -22,7 +22,7 @@ export default function Projects() {
             title: "Grocery Sales Analysis Case Study",
             description: "Analyzed grocery sales data to find trends and optimize inventory",
             techStack: ["SQL", "Excel", "Tableau", "R"],
-            source: "https://github.com/sydneyh9/groceryDataAnalysis",
+            source: "https://github.com/sydneyh9/GrocerySalesAnalysis",
             demo:"",
         },
     ];
