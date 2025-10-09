@@ -30,7 +30,7 @@ export default function About() {
             <motion.div
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{delay: 0.3}}
+            transition={{delay: 0.3, duration: 0.6}}
             className="skills-section"
             >
                 <p>
@@ -39,7 +39,7 @@ export default function About() {
             <motion.div
             initial={{opacity: 0, y: 40}}
             animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.6}}
+            transition={{delay: 0.6, duration: 0.6}}
             className="skills-section"
             >
                 <h2 className="skills-title">
@@ -87,13 +87,19 @@ export default function About() {
             <motion.div
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{delay: 0.9}}
+            transition={{delay: 0.9, duration: 0.6}}
             className="skill-section"
             >
                 <p className="contact-section">
                     I'm eager to leverage my experience in leadership and skills 
                     to grow as a developer and analyst.
                 </p>
+            </motion.div>
+            <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{delay: 1.2, duration: 0.6}}
+            >
                 <a
                 href="/contact"
                 className="contact-button"
