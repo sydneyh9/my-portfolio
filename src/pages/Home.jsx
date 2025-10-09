@@ -85,11 +85,11 @@ export default function Home() {
                     />
                     <FaKaggle
                     className="coffee-icon"
-                    onClick={() => window.open("https://kaggle.com/sydneyh9","_blank")}
+                    onClick={() => window.open("https://www.kaggle.com/sydneyholland","_blank")}
                     />
                     <FaLinkedin
                     className="coffee-icon"
-                    onClick={() => window.open("https://linkedin.com/in/sydneyh9","_blank")}
+                    onClick={() => window.open("https://www.linkedin.com/in/sydneyholland25","_blank")}
                     />
                 </div>
             </motion.div>
